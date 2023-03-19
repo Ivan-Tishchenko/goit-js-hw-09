@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-
+import Notiflix from "notiflix";
 
 
 
@@ -34,7 +34,7 @@ function reviewDate(choseDate) {
         ms = new Date(choseDate[0]).getTime();
         return;
     }
-    window.alert("Please choose a date in the future");
+    Notiflix.Notify.warning("Please choose a date in the future");
 }
 
 

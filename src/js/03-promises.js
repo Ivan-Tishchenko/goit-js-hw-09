@@ -33,9 +33,9 @@ function startGeneratPromis(e) {
 
   interval = setInterval(() => {
     createPromise(i, inputDelay).then(({ position, delay }) => {
-      console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+      Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
     }).catch(({ position, delay }) => {
-      console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+      Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
     });
     i += 1;
     inputDelay += inputStep;
@@ -46,3 +46,6 @@ function startGeneratPromis(e) {
 
   }, inputStep)
 }
+
+
+
